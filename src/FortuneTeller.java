@@ -4,17 +4,36 @@ import java.util.Scanner;
 public class FortuneTeller {
 
 	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+
 		// Part 1
 
 		// Ask the user for the user’s first name.
+		System.out.println("Hello! Please enter your first name.");
+		String firstName = input.next();
 
 		// Ask the user for the user’s last name.
+		System.out.println("Thank you! Please enter your last name.");
+		String lastName = input.next();
+
 		// Ask the user for the user’s age.
+		System.out.println("Awesome! Now, enter your age please.");
+		int age = input.nextInt();
+
 		// Ask the user for the user’s birth month (as an 'int').
+		System.out.println(
+				"You're doing GREAT! Now, please enter your birth month in xx format.\n (Example: March would be 03.)");
+		int birthMonth = input.nextInt();
+
 		// Ask the user for the user’s favorite ROYGBIV color.
+		System.out.println("Ok almost done. What is your favorite ROYGBIV color?");
+		String favoriteColor = input.next();
+
+		// Ask the user for the user's number of siblings.
+		System.out.println("Alright! " +firstName + " Last question....I promise. ;-). How many siblings do you have?");
+		
 		// If the user does not know what ROYGBIV is, ask the user to enter “Help” to
 		// get a list of the ROYGBIV colors.
-		// Ask the user for the user's number of siblings.
 
 		//
 		// Part 2
