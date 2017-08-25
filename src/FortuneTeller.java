@@ -11,29 +11,48 @@ public class FortuneTeller {
 		// Ask the user for the user’s first name.
 		System.out.println("Hello! Please enter your first name.");
 		String firstName = input.next();
+		String upperFirstName = firstName.substring(0, 1).toUpperCase() + firstName.substring(1);
 
 		// Ask the user for the user’s last name.
 		System.out.println("Thank you! Please enter your last name.");
 		String lastName = input.next();
+		String upperLastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1);
 
 		// Ask the user for the user’s age.
 		System.out.println("Awesome! Now, enter your age please.");
 		int age = input.nextInt();
 
 		// Ask the user for the user’s birth month (as an 'int').
-		System.out.println(
-				"You're doing GREAT! Now, please enter your birth month in xx format.\n (Example: March would be 03.)");
+		System.out.println("You're doing GREAT! Now, please enter your birth month in xx format.\n"
+				+ " (Example: March would be 03.)");
 		int birthMonth = input.nextInt();
 
 		// Ask the user for the user’s favorite ROYGBIV color.
 		System.out.println("Ok almost done. What is your favorite ROYGBIV color?");
-		String favoriteColor = input.next();
 
-		// Ask the user for the user's number of siblings.
-		System.out.println("Alright! " +firstName + " Last question....I promise. ;-). How many siblings do you have?");
-		
 		// If the user does not know what ROYGBIV is, ask the user to enter “Help” to
 		// get a list of the ROYGBIV colors.
+		System.out.println("(Not sure what ROYGBIV is? Just type \"Help\" to find out.)");
+		String favoriteColor = input.next();
+		while (favoriteColor.equalsIgnoreCase("Help")) {
+			System.out.println("R = Red  O = Orange  Y = Yellow  G = Green  B = Blue  I = Indigo  V = Violet");
+
+			System.out.println("Ok let's try this again. What is your favorite ROYGBIV color?");
+			System.out.println("(Still not sure what ROYGBIV is? Remeber, Just type \"Help\" to find out.)");
+			favoriteColor = input.next();
+			if (favoriteColor.equalsIgnoreCase("red") || favoriteColor.equalsIgnoreCase("orange")
+					|| favoriteColor.equalsIgnoreCase("yellow") || favoriteColor.equalsIgnoreCase("green")
+					|| favoriteColor.equalsIgnoreCase("blue") || favoriteColor.equalsIgnoreCase("indigo")
+					|| favoriteColor.equalsIgnoreCase("violet")) {
+				break;
+			}
+
+		}
+
+		// Ask the user for the user's number of siblings.
+		System.out.println(
+				"Alright! " + upperFirstName + " Last question....I promise. ;-). How many siblings do you have?");
+		int numberOfSiblings = input.nextInt();
 
 		//
 		// Part 2
@@ -41,8 +60,8 @@ public class FortuneTeller {
 		// For each of the below, you will select your own value for each condition. The
 		// table will give the conditions and an example for each. Don't steal our
 		// examples—be creative!
+
 		/// Retirement Years
-		//
 		// The user's number of years until retirement will be based on whether the
 		// user's age is odd or even.
 		/// (condition) If the user's age is… (example) then the user will retire in…
