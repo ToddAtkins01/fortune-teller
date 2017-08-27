@@ -164,9 +164,7 @@ public class FortuneTeller {
 		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
 		// Your program should be able to process input whether a user enters capital or
 		// lowercase letters.
-		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with "); + bankBalance
-		// + " in the bank, a vacation home in " + vacationHome + ", and travel by " +
-		// modeOfTransportation + ".");
+		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with ") + bankBalance  + " in the bank, a vacation home in " + vacationHome + ", and travel by " + modeOfTransportation + ".");
 
 		input.close();
 
