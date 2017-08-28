@@ -53,11 +53,9 @@ public class FortuneTeller {
 		int numberOfSiblings = input.nextInt();
 
 		// Part 2
-		//
 		// For each of the below, you will select your own value for each condition. The
 		// table will give the conditions and an example for each. Don't steal our
 		// examples—be creative!
-
 		/// Retirement Years
 		// The user's number of years until retirement will be based on whether the
 		// user's age is odd or even.
@@ -154,9 +152,7 @@ public class FortuneTeller {
 			bankBalance = -376983.83;
 		}
 		// Part 3
-		//
 		// Display the user's fortune in this format:
-		//
 		// *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank
 		// balance]* in the bank,
 		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
