@@ -26,8 +26,7 @@ public class FortuneTeller {
 		System.out.println("Awesome! Now, enter your age please.");
 		int age = input.nextInt();
 
-		System.out.println("You're doing GREAT! Now, please enter your birth month in xx format.\n"
-				+ " (Example: March would be 03.)");
+		System.out.println("You're doing GREAT! Now, please enter your birth month.");
 		int birthMonth = input.nextInt();
 
 		System.out.println("Ok almost done. What is your favorite ROYGBIV color?");
@@ -139,17 +138,17 @@ public class FortuneTeller {
 		// 9-12 $2,145,203.97
 		// anything else -$376,983.83
 
-		double bankBalance = 0;
+		String bankBalance = null;
 		if (birthMonth == 1 || birthMonth == 2 || birthMonth == 3) {
-			bankBalance = 5999123.56;
+			bankBalance = "$5,999,123.56";
 		} else if (birthMonth == 4 || birthMonth == 5 || birthMonth == 6) {
-			bankBalance = 265395.99;
+			bankBalance = "$265,395.99";
 		} else if (birthMonth == 7 || birthMonth == 8 || birthMonth == 9) {
-			bankBalance = 1;
+			bankBalance = "$1.00";
 		} else if (birthMonth == 10 || birthMonth == 11 || birthMonth == 12) {
-			bankBalance = 2145203.97;
+			bankBalance = "2,145,203.97";
 		} else {
-			bankBalance = -376983.83;
+			bankBalance = "$-376,983.83";
 		}
 		// Part 3
 		// Display the user's fortune in this format:
@@ -158,7 +157,7 @@ public class FortuneTeller {
 		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
 		// Your program should be able to process input whether a user enters capital or
 		// lowercase letters.
-		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with $"
+		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with "
 				+ bankBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by "
 				+ modeOfTransportation + ".");
 
