@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FortuneTeller {
+public class test {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
@@ -51,13 +51,13 @@ public class FortuneTeller {
 		System.out.println(
 				"Alright! " + upperFirstName + " Last question....I promise. ;-). How many siblings do you have?");
 		int numberOfSiblings = input.nextInt();
-
+		
 		// Part 2
 		//
 		// For each of the below, you will select your own value for each condition. The
 		// table will give the conditions and an example for each. Don't steal our
 		// examples—be creative!
-
+		
 		/// Retirement Years
 		// The user's number of years until retirement will be based on whether the
 		// user's age is odd or even.
@@ -69,7 +69,7 @@ public class FortuneTeller {
 		} else {
 			age = (16);
 		}
-
+		
 		// Vacation Home Location
 		// The location of the user's vacation home will be based on how many siblings
 		// the user has. If the user enters a number less than zero, give the user a bad
@@ -82,7 +82,7 @@ public class FortuneTeller {
 		// 3 Bora Bora
 		// greater than three Cape Cora, Florida
 		// less than zero Lake Chapala, Jalisco
-
+		
 		String vacationHome = null;
 		if (numberOfSiblings == 0) {
 			vacationHome = "Savannah, Ga";
@@ -97,7 +97,7 @@ public class FortuneTeller {
 		} else {
 			vacationHome = "Lake Chapala, Jalisco";
 		}
-
+		
 		// Mode of Transporation
 		/// The user's mode of transportation will determined by the user's favorite
 		// color.
@@ -110,7 +110,7 @@ public class FortuneTeller {
 		// blue Bentley Mulsanne
 		// indigo Honda Odyssey
 		// violet Hyperloop
-
+		// I added in line 119 then too out the String before all the variables below
 		String modeOfTransportation = null;
 		if (favoriteColor.equalsIgnoreCase("red")) {
 			modeOfTransportation = "Huffy";
@@ -140,7 +140,11 @@ public class FortuneTeller {
 		// 6-8 $1
 		// 9-12 $2,145,203.97
 		// anything else -$376,983.83
-
+		
+		// So since i changed this to a double i will have to take out the commas
+		// this is what i was trying to fix on my own... the number will be right
+		// but not in currency form... still looking into it
+		// I added line 153 and changed it to a double since it will show decimal places
 		double bankBalance = 0;
 		if (birthMonth == 1 || birthMonth == 2 || birthMonth == 3) {
 			bankBalance = 5999123.56;
@@ -162,12 +166,9 @@ public class FortuneTeller {
 		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
 		// Your program should be able to process input whether a user enters capital or
 		// lowercase letters.
-		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with $"
+		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with "
 				+ bankBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by "
 				+ modeOfTransportation + ".");
-
 		input.close();
-
 	}
-
 }
