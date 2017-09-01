@@ -6,14 +6,7 @@ public class FortuneTeller {
 		Scanner input = new Scanner(System.in);
 
 		// Part 1
-		// Ask the user for the user’s first name.
-		// Ask the user for the user’s last name.
-		// Ask the user for the user’s age.
-		// Ask the user for the user’s birth month (as an 'int').
-		// Ask the user for the user’s favorite ROYGBIV color.
-		// If the user does not know what ROYGBIV is, ask the user to enter “Help” to
-		// get a list of the ROYGBIV colors.
-		// Ask the user for the user's number of siblings.
+	
 
 		System.out.println("Hello! Please enter your first name.");
 		String firstName = input.next();
@@ -52,33 +45,12 @@ public class FortuneTeller {
 		int numberOfSiblings = input.nextInt();
 
 		// Part 2
-		// For each of the below, you will select your own value for each condition. The
-		// table will give the conditions and an example for each. Don't steal our
-		// examples—be creative!
-		/// Retirement Years
-		// The user's number of years until retirement will be based on whether the
-		// user's age is odd or even.
-		/// (condition) If the user's age is… (example) then the user will retire in…
-		// odd 25 years
-		// even 16 years
+
 		if (age % 2 != 0) {
 			age = (25);
 		} else {
 			age = (16);
 		}
-
-		// Vacation Home Location
-		// The location of the user's vacation home will be based on how many siblings
-		// the user has. If the user enters a number less than zero, give the user a bad
-		// location!
-		/// (condition) If the user's number of siblings is… (example) then the user's
-		// vacation home will be in…
-		// 0 Savannah, Ga
-		// 1 Abruzzo, Italy
-		// 2 Zermatt, Switzerland
-		// 3 Bora Bora
-		// greater than three Cape Cora, Florida
-		// less than zero Lake Chapala, Jalisco
 
 		String vacationHome = null;
 		if (numberOfSiblings == 0) {
@@ -94,19 +66,6 @@ public class FortuneTeller {
 		} else {
 			vacationHome = "Lake Chapala, Jalisco";
 		}
-
-		// Mode of Transporation
-		/// The user's mode of transportation will determined by the user's favorite
-		// color.
-		/// (condition) If the user's favorite color is… (example) then the user's mode
-		// of transportation will be…
-		// red Huffy
-		// orange Ford Pinto
-		// yellow Uber/Lyft
-		// green Teleport
-		// blue Bentley Mulsanne
-		// indigo Honda Odyssey
-		// violet Hyperloop
 
 		String modeOfTransportation = null;
 		if (favoriteColor.equalsIgnoreCase("red")) {
@@ -126,18 +85,7 @@ public class FortuneTeller {
 		} else {
 			modeOfTransportation = "Rocket to the moon for not answering correctly.";
 		}
-		// Bank Balance
-		/// The user's bank balance at retirement will be based on the user's birth
-		// month. If the user enters something other than 1-12 for birth month, the
-		// user's balance will be $0.00.
-		/// (condition) If the user's birth month is… (example) The user's balance will
-		// be…
-		// 1-3 $5,999,123.56
-		// 4-6 $265,395.99
-		// 6-8 $1
-		// 9-12 $2,145,203.97
-		// anything else -$376,983.83
-
+	
 		String bankBalance = null;
 		if (birthMonth == 1 || birthMonth == 2 || birthMonth == 3) {
 			bankBalance = "$5,999,123.56";
@@ -151,12 +99,7 @@ public class FortuneTeller {
 			bankBalance = "$-376,983.83";
 		}
 		// Part 3
-		// Display the user's fortune in this format:
-		// *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank
-		// balance]* in the bank,
-		// a vacation home in *[location]*, and travel by *[mode of transporation]*.
-		// Your program should be able to process input whether a user enters capital or
-		// lowercase letters.
+	
 		System.out.println(upperFirstName + " " + upperLastName + " will retire in " + age + " years with "
 				+ bankBalance + " in the bank, a vacation home in " + vacationHome + ", and travel by "
 				+ modeOfTransportation + ".");
